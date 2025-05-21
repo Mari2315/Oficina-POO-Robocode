@@ -1,0 +1,25 @@
+-Autor: Maria Helena
+-Atividade: 03
+-Kata: Vowel Count
+-Data: 21/05/2025
+
+public class Vowels {
+
+  public static int getCount(String str) {
+    if (str == null || str.length() == 0) {
+      return 0;
+    }
+
+    int count = 0;
+    String vowels = "aeiou";
+
+    for (int i = 0; i < str.length(); i++) {
+      if (vowels.indexOf(str.charAt(i)) != -1) {
+        count++;
+      }
+    }
+
+    return count;
+  }
+
+}
