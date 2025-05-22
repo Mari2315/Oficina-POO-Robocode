@@ -1,0 +1,35 @@
+/*
+
+-Autor: Maria Helena
+-Atividade: 04
+-Kata: Basic Mathematical Operations
+-Data: 06/05/2025
+
+*/
+
+public class BasicOperations {
+
+    public static Integer basicMath(String op, int v1, int v2) {
+        
+        switch (op) {
+            case "+":
+                return v1 + v2;
+            case "-":
+                return v1 - v2;
+            case "*":
+                return v1 * v2;
+            case "/":
+                
+                if (v2 != 0) {
+                    return v1 / v2;
+                } else {
+                    System.out.println("Erro: Divisão por zero!");
+                    return null; 
+                }
+            default:
+                System.out.println("Operador inválido");
+                return null;
+        }
+    }
+
+}
