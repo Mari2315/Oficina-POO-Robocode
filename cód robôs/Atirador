@@ -1,0 +1,32 @@
+package Atirar;
+import robocode.*;
+
+public class Atirador extends Robot
+{
+
+	public void run() {
+	
+		while(true) {
+			ahead(100);
+			turnGunRight(360);
+			back(100);
+			turnGunRight(360);
+		}
+	}
+
+	
+	public void onScannedRobot(ScannedRobotEvent e) {
+		fire(3);
+		ahead(100);
+		
+	}
+
+
+	public void onHitByBullet(HitByBulletEvent e) {
+		back(10);
+	}
+	
+	public void onHitWall(HitWallEvent e) {
+		back(20);
+	}	
+}
